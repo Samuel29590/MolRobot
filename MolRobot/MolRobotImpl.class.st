@@ -26,7 +26,7 @@ MolRobotImpl >> componentInitialize [
 	
 	position := 0@0.
 	direction := 0.
-	mySpace := self openInNewSpace.
+	mySpace := self openInNewSpace extent:510@510.
 	self geometry: BlTriangleGeometry new.
 	self geometry beTop.
 	self background: Color black.

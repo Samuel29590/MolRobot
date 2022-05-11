@@ -21,16 +21,16 @@ MolControlerImpl >> componentActivate [
 		sendEventsThread := [ | compt |
 			compt := 10000.
 	 		[compt > 0] whileTrue:[ 
-				(Delay forMilliseconds: 100) wait.
+				(Delay forMilliseconds: 50) wait.
 				x := random nextIntegerBetween: 1 and: 5 .
 				linearForce := x.
 				x := random nextIntegerBetween: 1 and: 2 .
 				angularForce := x.
-				x := random nextIntegerBetween: 1 and: 30 .
-				((x=1)|(x=2)) ifTrue: [ self getMolMovementEventsNotifier turnLeft ].
-				((x=3)|(x=4)) ifTrue: [ self getMolMovementEventsNotifier turnRight ].
-				x = 5 ifTrue: [ self getMolMovementEventsNotifier goBackward ].
-				x > 5 ifTrue: [ self getMolMovementEventsNotifier goForward ].
+				x := random nextIntegerBetween: 1 and: 50 .
+				((x=1)|(x=2)|(x=3)) ifTrue: [ self getMolMovementEventsNotifier turnLeft ].
+				((x=4)|(x=5)|(x=6)) ifTrue: [ self getMolMovementEventsNotifier turnRight ].
+				x = 6 ifTrue: [ self getMolMovementEventsNotifier goBackward ].
+				x > 6 ifTrue: [ self getMolMovementEventsNotifier goForward ].
 				compt := compt -1.
 			].
 		] forkAt: Processor userBackgroundPriority.

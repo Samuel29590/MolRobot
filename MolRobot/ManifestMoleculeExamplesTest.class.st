@@ -18,6 +18,11 @@ ManifestMoleculeExamplesTest class >> ruleLongMethodsRuleV1FalsePositive [
 ]
 
 { #category : #'code-critics' }
+ManifestMoleculeExamplesTest class >> ruleSearchingLiteralRuleV1FalsePositive [
+	^ #(#(#(#RGMethodDefinition #(#MolControlerImpl #componentActivate #false)) #'2022-05-11T15:14:19.270688+01:00') )
+]
+
+{ #category : #'code-critics' }
 ManifestMoleculeExamplesTest class >> ruleThemeAPIUpdateRuleV1FalsePositive [
 	^ #(#(#(#RGMethodDefinition #(#'MolRobotExampleLauncher class' #start #true)) #'2022-05-06T10:02:26.578312+01:00') )
 ]
