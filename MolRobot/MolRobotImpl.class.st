@@ -35,6 +35,13 @@ MolRobotImpl >> componentInitialize [
 ]
 
 { #category : #'life cycle' }
+MolRobotImpl >> componentPassivate [
+	"here write the code corresponding to component passivation phase"
+	
+	self getMolMovementEventsSubscriber unsubscribe: self.
+]
+
+{ #category : #'life cycle' }
 MolRobotImpl >> componentRemove [
 	"here write the code corresponding to component remove phase"
 	

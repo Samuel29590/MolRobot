@@ -8,6 +8,24 @@ Class {
 }
 
 { #category : #scripts }
+MolRobotExampleLauncher class >> pause [
+	<script: 'self pause'>
+	"Pause the simulation"
+	
+	MolControlerImpl passivate.
+	MolRobotImpl  passivate.
+]
+
+{ #category : #scripts }
+MolRobotExampleLauncher class >> play [
+	<script: 'self play'>
+	"Pause the simulation"
+	
+	MolControlerImpl activate.
+	MolRobotImpl  activate .
+]
+
+{ #category : #scripts }
 MolRobotExampleLauncher class >> start [
 	<script: 'self start'>
 	| robotParameters |
